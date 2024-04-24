@@ -1,4 +1,4 @@
-package com.joelmaciel.libraryproducer.domain.controllers;
+package com.joelmaciel.libraryproducer.api.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.joelmaciel.libraryproducer.domain.events.LibraryEvent;
