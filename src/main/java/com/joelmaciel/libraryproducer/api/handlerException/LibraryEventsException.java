@@ -1,4 +1,4 @@
-package com.joelmaciel.libraryproducer.api.exceptionHandler;
+package com.joelmaciel.libraryproducer.api.handlerException;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 @ControllerAdvice
 @Slf4j
-public class LibraryEventsControllerAdvice {
+public class LibraryEventsException {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> handleException(MethodArgumentNotValidException ex) {
