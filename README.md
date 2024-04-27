@@ -15,7 +15,7 @@
 
 ## Technology used :
 -  JAVA --  SPRING BOOT - KAFKA
--  DOCKER -- JUNIT5
+-  DOCKER -- INTEGRATION AND UNIT TESTS -- MOCKITO
 
 
 ## Request Images
