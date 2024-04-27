@@ -3,6 +3,7 @@ package com.joelmaciel.libraryproducer.api.controllers;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.joelmaciel.libraryproducer.domain.events.LibraryEvent;
 import com.joelmaciel.libraryproducer.producer.LibraryEventsProducer;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class LibraryEventsController {
     }
 
     @PostMapping("/v1/libraryevent")
-    public ResponseEntity<LibraryEvent> postLibraryEvent(@RequestBody LibraryEvent libraryEvent) throws JsonProcessingException, ExecutionException, InterruptedException, TimeoutException {
+    public ResponseEntity<LibraryEvent> postLibraryEvent(@RequestBody @Valid LibraryEvent libraryEvent) throws JsonProcessingException, ExecutionException, InterruptedException, TimeoutException {
         log.info("libraryEvent : {}", libraryEvent);
         // libraryEventsProducer.sendLibraryEvent(libraryEvent);
         //  libraryEventsProducer.sendLibraryEventApproachTwo(libraryEvent);
